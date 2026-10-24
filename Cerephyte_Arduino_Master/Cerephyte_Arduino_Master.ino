@@ -19,7 +19,10 @@ const unsigned long sampleInterval = 200;
 void setup() {
   Wire.begin(); 
   ss.begin(9600); // Rock-solid baud rate across the level shifter
-
+  pinMode(2, OUTPUT);
+  pinMode(5, OUTPUT);
+  digitalWrite(2, HIGH);
+  digitalWrite(5, HIGH);
   pinMode(TOUCH_A2, INPUT);
   pinMode(TOUCH_A3, INPUT);
   pinMode(LED_BUILTIN, OUTPUT);
@@ -37,8 +40,8 @@ void loop() {
     int touchValA3 = digitalRead(TOUCH_A3);
     digitalWrite(LED_BUILTIN, touchValA2); // Visual touch confirmation
 
-    float volts0 = ads.computeVolts(ads.readADC_SingleEnded(0));
-    float volts1 = ads.computeVolts(ads.readADC_SingleEnded(1));
+    float volts0 = ads.computeVolts(ads.readADC_SingleEnded(1));
+    float volts1 = ads.computeVolts(ads.readADC_SingleEnded(0));
     float busVoltage = ina219.getBusVoltage_V();
     float current_mA = ina219.getCurrent_mA();
 

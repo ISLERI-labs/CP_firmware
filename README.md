@@ -1,7 +1,7 @@
 # CerePhyte Firmware
 
 <p align="y">
-  <img src="images/logo.jpg" alt="ISLERI organization logo" width="180">
+  <img src="images/isleri_logo.jpg" alt="ISLERI organization logo" width="180">
 </p>
 
 Firmware for a two-board sensor system. An Arduino reads sensors and controls
@@ -14,7 +14,7 @@ exposes them through a Wi-Fi access point and a small HTTP API.
 | --- | --- |
 | [`Cerephyte_Arduino_Master/Cerephyte_Arduino_Master.ino`](Cerephyte_Arduino_Master/Cerephyte_Arduino_Master.ino) | Samples the sensors, controls the multiplexers, and sends serial telemetry. |
 | [`Cerephyte_NodeMCU_REST_API_AP/Cerephyte_NodeMCU_REST_API_AP.ino`](Cerephyte_NodeMCU_REST_API_AP/Cerephyte_NodeMCU_REST_API_AP.ino) | Creates the ESP8266 Wi-Fi access point, parses telemetry, and serves HTTP endpoints. |
-| [`images/logo.jpg`](images/logo.jpg) | CerePhyte logo used above. |
+| [`images/isleri_logo.jpg`](images/isleri_logo.jpg) | isleri organisation logo used above. |
 | [`LICENSE`](LICENSE) | Apache License 2.0. |
 
 ## Hardware and wiring
